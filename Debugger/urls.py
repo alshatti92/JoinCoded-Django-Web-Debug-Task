@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from ..cinescape import views
+from cinescape import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('movies/', movie_list_view, name='movie_list'),
-    path('movies/<int:moveis_id>/', movie_detail_view, name="movie_detail"),
+    path('movies/', views.movie_list_view, name='movie_list'),
+    path('movies/<int:moveis_id>/', views.movie_detail_view, name="movie_detail"),
 ]
